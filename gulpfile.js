@@ -76,13 +76,13 @@ gulp.task('jshint', function() {
  * It's dempendent on the jshint task to succeed
  */
 gulp.task('scripts', ['jshint'], function() {
-    return gulp.src('./js/minifest.js')
+    return gulp.src('./js/manifest.js')
         .pipe( include())
         .pipe( rename({ basename: 'scripts' }))
         .pipe(gulp.dest('./js/dist'))
         //Normal done, time to create the minified js (scripts.min.js)
         // remove the following 3 lines if you don't want it
-        .pip(uglify())
+        .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./js/dist'))
         .pipe(notify({ title: 'JavaScript', message: 'scripts task complete' }))
