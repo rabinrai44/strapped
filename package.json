@@ -1,0 +1,29 @@
+{
+  "name": "strapped",
+  "version": "1.0.0",
+  "description": "Bootstrap 3 WordPress Theme",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "author": "Rabin R",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-bower": "0.0.13",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.0.0",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "jshint": "^2.9.5"
+  }
+}

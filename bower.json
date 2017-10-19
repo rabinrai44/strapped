@@ -1,0 +1,23 @@
+{
+    "name": "strapped",
+    "version": "1.0.0",
+    "homepage": "",
+    "description": "Bootstrap 3 WordPress Theme",
+    "moduleType": [
+        "node"
+    ],
+    "authors": [
+        "Rabin R"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap-sass": "latest",
+        "fontawesome": "latest"
+    }
+}
