@@ -35,6 +35,9 @@ if ( ! function_exists( 'strapped_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
+		/* Custom Logo Support */
+		add_theme_support( 'custom-logo' );
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -44,7 +47,7 @@ if ( ! function_exists( 'strapped_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'strapped' ),
+			'primary' => esc_html__( 'Primary', 'strapped' ),
 		) );
 
 		/*
@@ -95,6 +98,29 @@ function strapped_content_width() {
 }
 add_action( 'after_setup_theme', 'strapped_content_width', 0 );
 
+if ( !function_exists( 'strapped_the_custom_logo' ) ) :
+	/**
+	 * Displays the optional custom logo.
+	 *
+	 * Does nothing if the custom logo is not available.
+	 *
+	 */
+	function strapped_the_custom_logo() {
+		// Try to retrieve the Custom Logo
+		$output = '';
+		if (function_exists('get_custom_logo'))
+			$output = get_custom_logo();
+	
+		// Nothing in the output: Custom Logo is not supported, or there is no selected logo
+		// In both cases we display the site's name
+		if (empty($output))
+			$output = '<a class="navbar-brand" href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>';
+	
+		echo $output;
+	}
+	endif;
+
+
 /**
  * Widgets 
  */
@@ -126,4 +152,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+ * Bootstrap Menu - Custom Walker
+ */
+require get_template_directory() . '/inc/bootstrap-walker.php';
 
