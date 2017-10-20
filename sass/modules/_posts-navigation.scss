@@ -1,0 +1,11 @@
+.posts-navigation {
+    margin: 30px 0;
+    .nav-previous,
+    .nav-next {
+        display: inline-block;
+    }
+
+    .nav-previous {
+        float: right;
+    }
+}
