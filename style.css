@@ -8368,12 +8368,12 @@ button.close {
       color: #333333; }
 
 .site-content {
-  word-break: break-word;
   margin-left: -15px;
   margin-right: -15px;
   content: "";
   display: table;
-  table-layout: fixed; }
+  table-layout: fixed;
+  word-break: break-word; }
   .site-content .content-area {
     position: relative;
     min-height: 1px;
