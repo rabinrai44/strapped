@@ -26,4 +26,10 @@
 		border: none;
 		box-shadow: none;
 	}
+
+	.tagcloud a {
+		@extend .btn;
+		@extend .btn-default;
+		margin-bottom: 5px;
+	}
 }
