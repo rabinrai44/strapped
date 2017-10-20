@@ -8353,12 +8353,16 @@ button.close {
 /*--------------------------------------------------------------
 # Post Navigation
 --------------------------------------------------------------*/
-.posts-navigation {
+.posts-navigation,
+.post-navigation {
   margin: 30px 0; }
   .posts-navigation .nav-previous,
-  .posts-navigation .nav-next {
+  .posts-navigation .nav-next,
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
     display: inline-block; }
-  .posts-navigation .nav-previous {
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {
     float: right; }
 
 /*--------------------------------------------------------------
