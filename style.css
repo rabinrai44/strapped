@@ -8345,7 +8345,9 @@ button.close {
   .widget select {
     max-width: 100%; }
   .widget ul {
-    padding: 15px 15px 15px 0; }
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px; }
   .widget table {
     width: 100%;
     max-width: 100%; }
